@@ -23,7 +23,7 @@ const UserRouter=require('./routes/users.js');
 
 const MongoDBStore = require("connect-mongo");
 
-const dbUrl = 'mongodb://localhost:27017/yelp-camp';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/my-Database';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
